@@ -768,11 +768,6 @@
             "include":[
                 {
                     "enabled":false,
-                    "host":"10.0.0.0-10.255.255.255",
-                    "protocol":"any"
-                },
-                {
-                    "enabled":false,
                     "host":"(^|^[^:]+:\\/\\/|[^\\.]+\\.)htb.*",
                     "protocol":"any"
                 },
@@ -784,6 +779,26 @@
                 {
                     "enabled":false,
                     "host":"(^|^[^:]+:\\/\\/|[^\\.]+\\.)vl.*",
+                    "protocol":"any"
+                },
+                {
+                    "enabled":false,
+                    "host":"10.0.0.0-10.255.255.255",
+                    "protocol":"any"
+                },
+                {
+                    "enabled":false,
+                    "host":"172.16.0.0-172.31.255.255",
+                    "protocol":"any"
+                },
+                {
+                    "enabled":false,
+                    "host":"192.168.0.0-192.168.255.255",
+                    "protocol":"any"
+                },
+                {
+                    "enabled":false,
+                    "host":"100.64.0.0-100.127.255.255",
                     "protocol":"any"
                 }
             ]
