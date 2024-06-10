@@ -27,7 +27,7 @@ tmux new-window -n 'recon'
 tmux split-window -h -t 'recon'.0 && tmux resize-pane -R 36
 tmux split-window -v -t 'recon'.1 && tmux resize-pane -U 16
 
-tmux send-keys -t 'recon'.0 'autorecon --only-scans-dir --no-port-dirs --dirbuster.threads 50 --dirbuster.wordlist /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt --subdomain-enum.threads 70 --subdomain-enum.wordlist /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --vhost-enum.threads 70 --vhost-enum.wordlist /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --wpscan.api-token L5X3jBnXfGxdN7Y2OCClOcr95VWCILg5pvDumLTG7IM -vvv $TARGET'
+tmux send-keys -t 'recon'.0 'autorecon --only-scans-dir --no-port-dirs --dirbuster.threads 50 --dirbuster.wordlist /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt --subdomain-enum.threads 70 --subdomain-enum.wordlist /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt --vhost-enum.threads 70 --vhost-enum.wordlist /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -vvv $TARGET'
 tmux send-keys -t 'recon'.1 "export TARGET= export ATTACKER_IP=$tun0_ipv4 DOMAIN=$name; echo -e \"\$TARGET\t$name\" | sudo tee -a /etc/hosts"
 tmux send-keys -t 'recon'.2 'cd results/*/scans'
 
