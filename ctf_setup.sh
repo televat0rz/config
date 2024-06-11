@@ -41,7 +41,7 @@ tmux send-keys -t 0:recon.1 "cd results/*/scans;tree -h"
 # Create another unnamed window and split the pane horizontally
 tmux new-window
 sleep 1
-tmux split-window -h -t 0:2.0 && tmux resize-pane -R 24
+tmux split-window -h -t 0:2.0 && tmux resize-pane -R 26
 tmux split-window -v -t 0:2.0 && tmux resize-pane -D 32
 tmux split-window -v -t 0:2.1 && tmux resize-pane -U 26
 sleep 2
